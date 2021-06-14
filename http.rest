@@ -1,0 +1,100 @@
+// get all
+GET http://localhost:3001/api/users
+
+###
+
+// get single user
+GET http://localhost:3001/api/users/60c6d0d9a46c4a8272950e4b
+
+###
+
+// post new user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "username": "noah2",
+  "email": "noah2-test@gmail.com"
+}
+
+###
+
+// update user
+PUT http://localhost:3001/api/users/60c6d0a8a46c4a8272950e4a
+Content-Type: application/json
+
+{
+  "username": "test update name"
+}
+
+###
+
+// delete user
+DELETE http://localhost:3001/api/users/60c6d47c5127f385e4b35bde
+
+###
+
+// post new user friend
+POST http://localhost:3001/api/users/60c6d0d9a46c4a8272950e4b/friends/60c6d0a8a46c4a8272950e4a
+
+###
+
+// delete user friend
+DELETE http://localhost:3001/api/users/60c6d0d9a46c4a8272950e4b/friends/60c6d0a8a46c4a8272950e4a
+
+###
+
+// get all thoughts
+GET http://localhost:3001/api/thoughts
+
+###
+
+// get single thought
+GET http://localhost:3001/api/thoughts/60c6d22ea46c4a8272950e4d
+
+###
+
+// post new thought
+POST http://localhost:3001/api/thoughts
+Content-Type: application/json
+
+{
+  "thoughtText": "another thought",
+  "username": "lernantino",
+  "userId": "5edff358a0fcb779aa7b118b"
+}
+
+###
+
+// update thought
+PUT http://localhost:3001/api/thoughts/60c6d212a46c4a8272950e4c
+Content-Type: application/json
+
+{
+  "thoughtText": "updating thought"
+}
+
+###
+
+// delete thought
+DELETE http://localhost:3001/api/thoughts/60c6d5355127f385e4b35bdf
+
+###
+
+// post new thought reaction
+POST http://localhost:3001/api/thoughts/60c6d22ea46c4a8272950e4d/reactions
+Content-Type: application/json
+
+{
+  "reactionBody": "Another reaction",
+  "username": "Noah"
+}
+###
+
+// delete thought reaction
+DELETE http://localhost:3001/api/thoughts/60c6d22ea46c4a8272950e4d/reactions
+Content-Type: application/json
+
+{
+  "reactionId": "60c6d5ac5127f385e4b35be0"
+}
